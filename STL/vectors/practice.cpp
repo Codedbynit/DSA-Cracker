@@ -80,7 +80,7 @@ int main(){
     return 0;
 }
 
-*/
+
 // 
 int main(){
     vector <pair <int , int>> v;
@@ -95,3 +95,47 @@ int main(){
 
     return 0;
 }
+
+
+// Q2 Erasing element from vector using v.erase() , input by user
+
+
+int main(){
+    vector <int> v;
+    int n;
+    cout<<"Enter size of vector : ";
+    cin>>n;
+
+    for(int i=0; i<n; i++){
+        int x;
+        cout<<"Enter elements in vector : ";
+        cin>>x;
+        v.push_back(x);
+    }
+    cout<<"vector is : ";
+    for(auto x:v){
+        cout<<x<<" ";
+    }
+
+    int pos;
+    cout<<"Enter pos (from where you want remove element)";
+    cin>>pos;
+    v.erase(v.begin()+pos-1);
+
+    cout<<endl;
+
+    int a,b;
+    cout<<"Enter range (a and b - all no will be erased in b/w this range ) : ";
+    cin>>a>>b;
+    v.erase(v.begin()+a-1 , v.begin()+b-1);
+
+    cout<<v.size()<< " ";
+
+    cout<<"Updated vector is : ";
+
+    for(auto x:v){
+        cout<<x<<" ";
+    }
+    return 0;
+}
+*/
