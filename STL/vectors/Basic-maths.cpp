@@ -74,7 +74,7 @@ int main(){
     }
     return 0;
 }
-*/
+
 
 // Checking if number is armstrong
 
@@ -97,6 +97,27 @@ int main(){
     cin>>N;
     if(IsArmstrong(N)) cout<<"True";
     else cout<<"False";
+
+    return 0;
+}
+*/
+//Checking if number is prime
+
+int main(){
+    int N;
+    cin>>N;
+    int count =0;
+
+    for(int i=1; i*i<=N;i++){
+        if(N%i ==0){
+            count++;
+        if((N/i) != i){
+            count++;
+        }
+    }
+    }
+    if(count ==2) cout<<"Number is prime";
+    else cout<<"Number is not prime";
 
     return 0;
 }
