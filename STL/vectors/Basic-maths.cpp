@@ -40,7 +40,7 @@ int main(){
     return 0;
 
 }
-*/
+
 
 // Checking if number is palinedrome
 
@@ -60,4 +60,17 @@ int main(){
 
     return 0;
 
+}
+*/
+//  Finding complete divisors of Numbers
+
+int main(){
+    int N;
+    cin>>N;
+    int dup = N;
+
+    for(int i=1; i<N; i++){
+        if(dup%i == 0) cout<<i<<",";
+    }
+    return 0;
 }
