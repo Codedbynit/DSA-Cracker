@@ -61,7 +61,7 @@ int main(){
     return 0;
 
 }
-*/
+
 //  Finding complete divisors of Numbers
 
 int main(){
@@ -72,5 +72,31 @@ int main(){
     for(int i=1; i<N; i++){
         if(dup%i == 0) cout<<i<<",";
     }
+    return 0;
+}
+*/
+
+// Checking if number is armstrong
+
+#include <iostream>
+using namespace std;
+
+bool IsArmstrong(int N){
+    int Numb = N;
+    int sum = 0;
+    while(N>0){
+        int ld = N%10;
+        sum +=(ld*ld*ld);
+        N = N/10;
+    }
+    return Numb == sum;
+}
+
+int main(){
+    int N;
+    cin>>N;
+    if(IsArmstrong(N)) cout<<"True";
+    else cout<<"False";
+
     return 0;
 }
