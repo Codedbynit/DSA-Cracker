@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <stack>
+#include <queue>
 using namespace std;
 
 
@@ -49,6 +51,57 @@ int main(){
     return 0;
 }
 
+
+
+// stack 
+
+int main(){
+    stack<int> s;
+
+    if(s.empty()){
+        cout<<"stack is empty"<<endl;
+    }
+    s.push(1);
+    s.push(2);
+    s.emplace(3);
+
+    if(!s.empty()){
+        cout<<"stack is not empty"<<endl;
+    }
+
+
+
+    // cout<<s.top()<<" ";
+    // cout<<s.size()<<" ";
+
+
+
+    return 0;
+
+}
 */
 
 
+// Queue -  follows fifo
+
+int main(){
+    queue<int> q;
+
+    int n;
+    cout<<"Enter the size of queue :" ;// size of queue
+    cin>>n;
+
+    for(int i=0;i<n; i++){
+        int x;
+        cout<<"Enter the elements : ";
+        cin>>x;
+        q.push(x);
+    }
+
+    for(int i=0; i<q.size();i++){
+        cout<<q.front();
+        q.pop();
+    }
+    return 0;
+
+}
