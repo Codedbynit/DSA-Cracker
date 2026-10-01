@@ -139,3 +139,118 @@ int main(){
     return 0;
 }
 */
+
+// GFG Vector Example and Question Practice 
+
+
+// Example :1
+/*
+
+int main(){
+    vector<int> v = {1,2,3,4,5};
+
+    for (int x:v){
+        cout<<x<<" ";
+    }
+    return 0;
+}
+
+
+// Example:2 - pushing char at the end of vectors
+
+int main(){
+    vector<char> v = { 'A' , 'B' ,'C'};
+
+    v.push_back('Z');
+
+    for(char x:v){
+        cout<<x<<" ";
+    }
+    return 0;
+}
+
+
+
+
+// Example:3 - accessing element through index and at().
+
+
+int main(){
+    vector<int> v ={2,3,4,5,6};
+
+    cout<<"Value at index 1: " << v[1]<<endl;
+
+    cout<<"Value at index 2: " << v.at(2)<<endl;
+
+    return 0;
+}
+    
+
+
+//Example:4 -- updating element 
+
+// int main(){
+//     vector<int> v = {2,3,4};
+
+//     cout<<"value at index 1: " <<v[1]<<endl;
+
+//     v[1] = 100;
+
+//     cout<<"value at index 1:" <<v[1]<<endl;
+
+//     cout<<"size of vector : "<< v.size()<<endl;
+
+//     return 0;
+// }
+
+
+int main(){
+    vector<int> v={2,3,4,5,6};
+
+    v.pop_back();
+
+    v.erase(find(v.begin(),v.end(),2));
+
+    for (int x:v){
+        cout<<x << " ";
+    }
+    return 0;
+}
+
+
+int main(){
+    vector<int> v;
+
+    if(v.empty()){
+        cout<<"vector is empty"<<endl;
+    }
+    v.push_back(10);
+
+    if(!v.empty()){
+        cout<<"vector is not empty";
+    }
+    return 0;
+}
+
+// 2 d vector 
+
+
+
+int main(){
+    vector<vector<int>> matrix ={
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+
+    for(const auto &row :matrix){
+        for(const auto &val : row){
+            cout<<val<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+*/
+
