@@ -6,6 +6,7 @@
 #include <deque>
 #include <set>
 #include <unordered_set>
+#include <map>
 using namespace std;
 
 
@@ -189,7 +190,7 @@ int main(){
     
     return 0;
 }
-*/
+
 
 // unordered set
 
@@ -224,3 +225,39 @@ int main(){
     }
     return 0;
 }
+
+
+
+int main(){
+    map<int,string> m;
+    
+    m = {
+        {1,"Nityansh"}, 
+        {2, "Arya"} , 
+        {3, "Parnav"} , 
+        {4, "Umang"}};
+
+    for(auto &x : m){
+        cout<< x.first<< " " << x.second <<endl;
+    }
+
+    m[1] = "Nityansh Chandoriya";
+    m.erase(4);
+
+    cout<<endl;
+
+    for (auto it = m.begin(); it!= m.end(); it++){
+        cout<< it->first << " " << it->second <<" ";
+    }
+
+    auto fd = m.find(1);
+
+    cout<<endl;
+
+    if(fd!=m.end()){
+        cout<< "key found : " << fd->first << " " <<fd->second;
+    }
+    else cout << "Key not found !! ";
+    return 0;
+}
+*/
