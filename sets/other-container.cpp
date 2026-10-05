@@ -5,6 +5,7 @@
 #include <queue>
 #include <deque>
 #include <set>
+#include <unordered_set>
 using namespace std;
 
 
@@ -189,3 +190,37 @@ int main(){
     return 0;
 }
 */
+
+// unordered set
+
+int main(){
+    unordered_set<int> us = {1,2,3,4,5,6};
+
+    for (auto x: us){
+        cout<< x << " ";
+    }
+
+    us.erase(6);
+    us.insert(100); 
+
+    cout<<endl;
+
+    for (auto x: us){
+        cout<< x << " ";
+    }
+    
+    // find
+
+    auto it = us.find(100);
+
+    if(it != us.end()){
+        cout<<"\nElement found : " <<*it;
+    }
+
+    cout<<endl;
+
+    for(auto it = us.begin(); it!=us.end(); it++){
+        cout<< *it << " ";
+    }
+    return 0;
+}
