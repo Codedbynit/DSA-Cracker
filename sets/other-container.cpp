@@ -4,6 +4,7 @@
 #include <stack>
 #include <queue>
 #include <deque>
+#include <set>
 using namespace std;
 
 
@@ -106,7 +107,7 @@ int main(){
     return 0;
 
 }
-*/
+
 
 // acessing stack elements
 
@@ -147,3 +148,44 @@ int main(){
     }
     return 0;
 }
+
+
+// sets
+
+int main(){
+    set<int> s1,s2;
+
+    s1 = {1,2,3,4,5,6};
+
+    for (auto x : s1){
+        cout<<x << " ";
+    }
+
+    auto it = s1.find(2);
+
+    if (it!= s1.end()){
+        cout<<"\nElement found : " << *it <<endl;
+    }
+
+    auto kt = s1.erase(2);
+
+    if (it!=s1.end()){
+        cout<<"\nElement deleted : "<< *it <<endl;
+    }
+
+    for (auto x :s1){
+        cout<< x << " ";
+    }
+
+    cout<<endl;
+
+    s1.insert(10);
+
+    for (auto x :s1){
+        cout<< x << " ";
+    }
+
+    
+    return 0;
+}
+*/
