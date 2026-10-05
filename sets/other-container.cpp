@@ -7,6 +7,8 @@
 #include <set>
 #include <unordered_set>
 #include <map>
+#include <unordered_map>
+#include <bits/stdc++.h>
 using namespace std;
 
 
@@ -261,3 +263,28 @@ int main(){
     return 0;
 }
 */
+
+int main(){
+    unordered_map<int ,string> m;
+
+    m = {
+        {1 , "Hello"},
+        {2, "Konichiwa"},
+        {3,"Namaste"},
+        {4, "hola"}};
+
+    for (auto it =m.begin(); it!=m.end(); it++ ){
+        cout<< it-> first << ": " << it->second << endl;
+    }
+
+    m[1] = "Anneyong-haseyo";
+
+    cout<<endl;
+
+    for (auto it =m.begin(); it!=m.end(); it++ ){
+        cout<< it-> first << ": " << it->second << endl;
+    }
+
+    return 0;
+}
+
